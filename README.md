@@ -26,7 +26,7 @@ PyTIPI é uma API desenvolvida em Python através do framework Robyn com o objet
 ## 💡Funcionalidades
 
 - Buscar todos os NCM's
-- Buscar por um **NCM** específico
+- Buscar por um NCM específico
 - Buscar por todos os itens de uma determinada categoria (com base no NCM)
 
 ## ⚙️Rotas
