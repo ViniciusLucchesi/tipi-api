@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyTIPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    ::-webkit-scrollbar {
+      width: 20px;
+      height: 40px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #a4a8aa;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+
+    .scrollbar {
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+
+    .force-overflow {
+      max-height: 250px;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      background-color: #2d995d;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-thumb:hover {
+      scrollbar-color: #F5F5F5;
+    }
+
+    .scrollbar-primary {
+      scrollbar-color: #F5F5F5;
+    }
+
+    td:first-child {
+      border-left-style: solid;
+      border-top-left-radius: 10px;
+    }
+
+    td:last-child {
+      border-right-style: solid;
+      border-top-right-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container mt-5 d-flex flex-column">
+    <h1 class="display-1 text-center mb-1">PyTIPI</h1>
+    <h6 class="text-center mb-3">(Tabela de Incidência do Imposto sobre Produtos Industrializados)</h6>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Informações
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Os dados exibidos nesse site são baseados no Sistema Harmonizado de Designiação e de Codificação de
+              Mercadorias, utilizado com sua VII Emenda.</p>
+            <p>Esses dados foram coletados do site <a
+                href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/legislacao-por-assunto/tipi-tabela-de-incidencia-do-imposto-sobre-produtos-industrializados">www.gov.br/receitafederal</a>,
+              mantendo-se atualizado conforme os dados são modificados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <!-- <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br> -->
+
+    <table class="table">
+      <tr style="background: #2d995d; color: #fff;">
+        <td>NCM</td>
+        <td>EX</td>
+        <td>DESCRIÇÃO</td>
+        <td>ALÍQUOTA (%)</td>
+      </tr>
+      <tbody class="border-start border-end">
+        {% for line in data %}
+        <tr>
+          <td>{{ line["NCM"] }}</td>
+          <td>{{ line["EX"] }}</td>
+          <td>{{ line["DESCRIÇÃO"] }}</td>
+          <td>{{ line["ALÍQUOTA(%)"] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
