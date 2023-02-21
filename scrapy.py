@@ -1,5 +1,5 @@
 import re
-import time, json
+import time
 import httpx
 import pandas as pd
 from functools import wraps
@@ -87,7 +87,9 @@ def clear_data(df:pd.DataFrame) -> pd.DataFrame:
     df['EX'] = df['EX'].fillna('')
     df['ALÍQUOTA(%)'] = df['ALÍQUOTA(%)'].fillna('')
     df = df[df['NCM'].notnull()]
-    return df.sort_values('NCM')
+    resp = df.sort_index().reset_index()
+    resp = resp.drop('index', axis=1)
+    return resp
 
 def search_ncm(df:pd.DataFrame, search:str, identical:bool=True) -> pd.DataFrame:
     if identical:
@@ -102,22 +104,9 @@ def search_ncm(df:pd.DataFrame, search:str, identical:bool=True) -> pd.DataFrame
     resp = df[df['NCM'].str.contains(regex)]
     resp = resp.sort_index().reset_index()
     resp = resp.drop('index', axis=1)
-
     return resp
 
 def get_valid_tipi_data() -> pd.DataFrame:
     pickle = load_pickle()
     data = clear_data(pickle)
     return data
-        
-
-
-def main():
-    context = get_valid_tipi_data()
-    search = search_ncm(context, '1.01', identical=False)
-    data = json.loads(search.to_json(orient='records', force_ascii=False))
-    print(type(data[0]))
-
-
-if __name__ == '__main__':
-    main()
