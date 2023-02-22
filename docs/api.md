@@ -1,10 +1,4 @@
-# 🚧 Em breve
-
-- Disponibilisar um site (exibindo todos os NCMs)
-- Impelentar download dos 3 formatos de arquivos
-- Implementar rotas assíncronas
-
-## ⚙️Rotas
+# ⚙️ Rotas
 
 > **GET**
 >

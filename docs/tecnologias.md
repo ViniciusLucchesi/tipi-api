@@ -1,4 +1,4 @@
-# Python
+# :snake: Python
 
 Python é uma **linguagem de programação** de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Lançada por Guido Van Rossum em 1991. 
 
