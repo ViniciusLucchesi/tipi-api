@@ -28,14 +28,6 @@ def sync_ncm_all():
     return json.loads(context.to_json(orient='records', force_ascii=False))
 
 
-# @app.get('/api/all/ncm/:search')
-# def sync_ncm_search(request):
-#     search = request['params']['search']
-#     context = get_valid_tipi_data()
-#     search = search_ncm(context, search, identical=False)
-#     return json.loads(search.to_json(orient='records', force_ascii=False))
-
-
 @app.get('/api/ncm/:search')
 def sync_ncm_search(request):
     search = request['params']['search']

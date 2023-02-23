@@ -110,10 +110,3 @@ def get_valid_tipi_data() -> pd.DataFrame:
     pickle = load_pickle()
     data = clear_data(pickle)
     return data
-
-
-
-if __name__ == '__main__':
-    data = get_valid_tipi_data()
-    search = search_ncm(data, '1.05')
-    print(search)
