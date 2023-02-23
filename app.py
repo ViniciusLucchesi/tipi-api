@@ -22,10 +22,11 @@ def sync_template_render_data():
 
 
 # API routes
-@app.get('/api/all/ncm')
+@app.get('/api/ncm/all')
 def sync_ncm_all():
     context = get_valid_tipi_data()
-    return json.loads(context.to_json(orient='records', force_ascii=False))
+    resp = json.loads(context.to_json(orient='records', force_ascii=False))
+    return json.dumps(resp, indent=4)
 
 
 @app.get('/api/ncm/:search')
@@ -33,7 +34,8 @@ def sync_ncm_search(request):
     search = request['params']['search']
     context = get_valid_tipi_data()
     search = search_ncm(context, search)
-    return json.loads(search.to_json(orient='records', force_ascii=False))
+    resp = json.loads(search.to_json(orient='records', force_ascii=False))
+    return json.dumps(resp, indent=4)
 
 
 

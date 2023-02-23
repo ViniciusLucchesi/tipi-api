@@ -14,7 +14,7 @@
 > Retorna todos os dados dos produtos registrados na TIPI
 >
 > ```text
-> .../api/all/ncm
+> .../api/ncm/all
 > ```
 
 ## 🌐Template
