@@ -8,13 +8,6 @@
 > .../api/ncm/<numero_do_ncm>
 > ```
 
-> **GET**
->
-> Retorna uma lista com base em um NCM
->
-> ```text
-> .../api/all/ncm/<numero_do_ncm>
-> ```
 
 > **GET**
 >
