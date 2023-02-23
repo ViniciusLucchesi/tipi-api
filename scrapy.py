@@ -69,9 +69,8 @@ def download_tipi(url:str) -> None:
     try:
         df = pd.read_excel(request, header=7)
         df.to_pickle('TIPI.pickle')
-        print(f'📄Nova planilha baixada 🫡')
     except Exception as error:
-        print(f'📄ERRO: Não foi possível baixar a tabela TIPI 😱', error)
+        print('ERRO: ', error)
 
 # @runtime
 def load_pickle() -> pd.DataFrame:
@@ -91,22 +90,30 @@ def clear_data(df:pd.DataFrame) -> pd.DataFrame:
     resp = resp.drop('index', axis=1)
     return resp
 
-def search_ncm(df:pd.DataFrame, search:str, identical:bool=True) -> pd.DataFrame:
-    if identical:
-        regex = re.sub('(\.)', '\.', search)
-        regex = f'^({regex})$'
-        return df[df['NCM'].str.contains(regex)]
+def search_ncm(df:pd.DataFrame, search:str) -> pd.DataFrame:
+    regex = re.sub('(\.)', '\.', search)
+    regex = f'^({regex})$'
+    retorno = df[df['NCM'].str.contains(regex)]
     
-    clean = re.sub('(\.)', '', search)
-    regex = re.sub('(\.)', '\.?', search)
-    regex = f'^(0{clean}|{regex}).*$'
-    
-    resp = df[df['NCM'].str.contains(regex)]
-    resp = resp.sort_index().reset_index()
-    resp = resp.drop('index', axis=1)
-    return resp
+    if retorno['ALÍQUOTA(%)'].values == ['']:
+        clean = re.sub('(\.)', '', search)
+        regex = re.sub('(\.)', '\.?', search)
+        regex = f'^0({clean}|{regex}).*$'
+        
+        resp = df[df['NCM'].str.contains(regex)]
+        resp = resp.sort_index().reset_index()
+        resp = resp.drop('index', axis=1)
+        return resp
+    return retorno
 
 def get_valid_tipi_data() -> pd.DataFrame:
     pickle = load_pickle()
     data = clear_data(pickle)
     return data
+
+
+
+if __name__ == '__main__':
+    data = get_valid_tipi_data()
+    search = search_ncm(data, '1.05')
+    print(search)
