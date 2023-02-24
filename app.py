@@ -3,22 +3,12 @@ import json
 import pathlib
 from scrapy import *
 from robyn import Robyn
-from robyn.robyn import Response
 from robyn.templating import JinjaTemplate
 
 app = Robyn(__file__)
 
 current_file_path = pathlib.Path(__file__).parent.resolve()
 jinja_template = JinjaTemplate(os.path.join(current_file_path, "templates"))
-
-
-# Templates
-@app.get('/')
-def sync_template_render_data():
-    context = load_pickle()
-    data = json.loads(context.to_json(orient='records', force_ascii=False))
-    template = jinja_template.render_template(template_name='index.html', data=data)
-    return Response(200, {"Content-Type":"text/html; charset=urf-8"}, template)
 
 
 # API routes

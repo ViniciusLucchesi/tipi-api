@@ -17,16 +17,6 @@
 > .../api/ncm/all
 > ```
 
-## 🌐Template
-
-> **GET**
->
-> Renderiza uma página HTML com todos os dados da tabela TIPI
->
-> ```text
-> .../
-> ```
-
 # Exemplos
 
 > **GET**
