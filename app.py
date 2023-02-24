@@ -15,7 +15,7 @@ jinja_template = JinjaTemplate(os.path.join(current_file_path, "templates"))
 # Templates
 @app.get('/')
 def sync_template_render_data():
-    context = get_valid_tipi_data()
+    context = load_pickle()
     data = json.loads(context.to_json(orient='records', force_ascii=False))
     template = jinja_template.render_template(template_name='index.html', data=data)
     return Response(200, {"Content-Type":"text/html; charset=urf-8"}, template)
@@ -24,7 +24,7 @@ def sync_template_render_data():
 # API routes
 @app.get('/api/ncm/all')
 def sync_ncm_all():
-    context = get_valid_tipi_data()
+    context = load_pickle()
     resp = json.loads(context.to_json(orient='records', force_ascii=False))
     return json.dumps(resp, indent=4)
 
@@ -32,7 +32,7 @@ def sync_ncm_all():
 @app.get('/api/ncm/:search')
 def sync_ncm_search(request):
     search = request['params']['search']
-    context = get_valid_tipi_data()
+    context = load_pickle()
     search = search_ncm(context, search)
     resp = json.loads(search.to_json(orient='records', force_ascii=False))
     return json.dumps(resp, indent=4)
