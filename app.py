@@ -1,14 +1,8 @@
-import os
 import json
-import pathlib
 from scrapy import *
 from robyn import Robyn
-from robyn.templating import JinjaTemplate
 
 app = Robyn(__file__)
-
-current_file_path = pathlib.Path(__file__).parent.resolve()
-jinja_template = JinjaTemplate(os.path.join(current_file_path, "templates"))
 
 
 # API routes
