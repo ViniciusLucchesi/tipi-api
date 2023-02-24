@@ -40,25 +40,7 @@
 > **GET**
 >
 > ```text
-> .../api/ncm/9011.20.1
-> ```
->
-> Retorno
-> ```json
-> [
->   {
->     "NCM": "9011.20.10",
->     "EX": "",
->     "DESCRIÇÃO": "Para fotomicrografia",
->     "ALÍQUOTA(%)": 3.25
->   }
-> ]
-> ```
-
-> **GET**
->
-> ```text
-> .../api/ncm/9011.20.1
+> .../api/ncm/0105.11
 > ```
 >
 > Retorno
