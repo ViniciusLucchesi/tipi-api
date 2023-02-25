@@ -30,7 +30,7 @@
 > [
 >   {
 >     "NCM": "9011.20.10",
->     "EX": "",
+>     "EX": null,
 >     "DESCRIÇÃO": "Para fotomicrografia",
 >     "ALÍQUOTA(%)": 3.25
 >   }
@@ -40,28 +40,40 @@
 > **GET**
 >
 > ```text
-> .../api/ncm/0105.11
+> .../api/ncm/1.03
 > ```
 >
 > Retorno
 > ```json
 > [
 >  {
->    "NCM": "0105.11",
->    "EX": "",
->    "DESCRIÇÃO": "Aves da espécie Gallus domesticus",
+>    "NCM": "1.03",
+>    "EX": null,
+>    "DESCRIÇÃO": "Animais vivos da espécie suína.",
 >    "ALÍQUOTA(%)": null
 >  },
 >  {
->    "NCM": "0105.11.10",
->    "EX": "",
->    "DESCRIÇÃO": "De linhas puras ou híbridas, para reprodução",
+>    "NCM": "0103.10.00",
+>    "EX": null,
+>    "DESCRIÇÃO": "Reprodutores de raça pura",
 >    "ALÍQUOTA(%)": 0
 >  },
 >  {
->    "NCM": "0105.11.90",
->    "EX": "",
+>    "NCM": "103.9",
+>    "EX": null,
 >    "DESCRIÇÃO": "Outros",
+>    "ALÍQUOTA(%)": null
+>  },
+>  {
+>    "NCM": "0103.91.00",
+>    "EX": null,
+>    "DESCRIÇÃO": "De peso inferior a 50 kg",
+>    "ALÍQUOTA(%)": 0
+>  },
+>  {
+>    "NCM": "0103.92.00",
+>    "EX": null,
+>    "DESCRIÇÃO": "De peso igual ou superior a 50 kg",
 >    "ALÍQUOTA(%)": 0
 >  }
 >]

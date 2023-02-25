@@ -85,7 +85,6 @@ def wipe_data(df:pd.DataFrame) -> pd.DataFrame:
     df = df.replace('(-)|(:)', '', regex=True)
     
     # Content
-    df['EX'] = df['EX'].fillna('')
     df['DESCRIÇÃO'] = df['DESCRIÇÃO'].str.strip()
     
     invalid_ncm = df[df['NCM'].isnull()].index
