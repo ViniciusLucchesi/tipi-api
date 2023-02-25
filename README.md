@@ -1,59 +1,105 @@
 # PyTIPI
+[![Documentação](https://img.shields.io/badge/Acessar-Documentação-informational?style=for-the-badge)](https://viniciuslucchesi.github.io/tipi-api/#/)
 
-PyTIPI é uma API desenvolvida em Python através do framework Robyn com o objetivo de buscar as alíquotas para cada um dos códigos do **NCM** (Nomenclatura Comum do Mercosul), segundo os dados disponibilizados pelo site [oficial do governo brasileiro](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/legislacao-por-assunto/tipi-tabela-de-incidencia-do-imposto-sobre-produtos-industrializados) na **Tabela de incidência do Imposto sobre produtos industrializados** que é baseada no Sistema Harmonizado de Designação e de Codificação de Mercadorias.
+É uma API desenvolvida em Python através do framework Robyn com o objetivo de buscar as alíquotas para cada um dos códigos do **NCM** _(Nomenclatura Comum do Mercosul)_ através da utilização do Web Scraping.
 
-## 📰 Últimas Atualizações
-
-### ⚖️ Decretos Oficiais
-
-- [Decreto n°11.182, de 24 de agosto de 2022](http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11182.htm)
-- [Ato Declaratório Executivo RFB n°5, de 29 de agosto de 2022](http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=125815)
-- [Ato Declaratório Executivo RFB n°6, de 20 de dezembro de 2022](http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=127946)
-
-
-### ⚙️ API - Em breve
-```text
-1. Disponibilisar um site (exibindo todos os NCMs)
-2. Impelentar download dos 3 formatos de arquivos
-3. Implementar rotas assíncronas
-```
+Ela utiliza os dados baixados de uma planilha de Excel disponibilizada no site oficial do governo brasileiro na aba da [Receita Federal](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/legislacao-por-assunto/tipi-tabela-de-incidencia-do-imposto-sobre-produtos-industrializados) através da **TIPI** _(Tabela de incidência do Imposto sobre produtos industrializados)_ que é baseada no Sistema Harmonizado de Designação e de Codificação de Mercadorias.
 
 ## 🚀Tecnologias
 
-- Python (3.11) 
-- Robyn (0.25)
+- Python (3.11.1)
+- Robyn (0.24.1)
+- Pandas (1.5.3)
+- Httpx (0.23.3)
+- selectolax (0.3.12)
 
 ## 💡Funcionalidades
-
 - Buscar todos os NCM's
-- Buscar por um NCM específico
-- Buscar por todos os itens de uma determinada categoria (com base no NCM)
+- Buscar por um NCM
 
 ## ⚙️Rotas
 
-Retorna todas as informações contidas na TIPI
+Retorno de um NCM específico
 ```text
-[GET] /api/ncm/all
+[GET] .../api/ncm/9011.20.10
+```
+```json
+[
+  {
+    "NCM": "9011.20.10",
+    "EX": null,
+    "DESCRIÇÃO": "Para fotomicrografia",
+    "ALÍQUOTA(%)": 3.25
+  }
+]
 ```
 
-Retorna somente um NCM específico
+Retorno de todos os NCM's encontrados
 ```text
-[GET] /api/ncm/<numero_do_ncm>
+[GET] .../api/ncm/all
 ```
-
-Retorna uma lista com base em um NCM
-```text
-[GET] /api/all/ncm/<numero_do_ncm>
+```json
+[
+    {
+        "NCM": "1.01",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Cavalos, asininos e muares, vivos.",
+        "AL\u00cdQUOTA(%)": null
+    },
+    {
+        "NCM": "101.2",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Cavalos",
+        "AL\u00cdQUOTA(%)": null
+    },
+    {
+        "NCM": "0101.21.00",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Reprodutores de ra\u00e7a pura",
+        "AL\u00cdQUOTA(%)": 0
+    },
+    {
+        "NCM": "0101.29.00",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Outros",
+        "AL\u00cdQUOTA(%)": 0
+    },
+    {
+        "NCM": "0101.30.00",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Asininos",
+        "AL\u00cdQUOTA(%)": 0
+    },
+    {
+        "NCM": "0101.90.00",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Outros",
+        "AL\u00cdQUOTA(%)": 0
+    },
+    {
+        "NCM": "1.02",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Animais vivos da esp\u00e9cie bovina.",
+        "AL\u00cdQUOTA(%)": null
+    },
+    {
+        "NCM": "102.2",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Bovinos dom\u00e9sticos",
+        "AL\u00cdQUOTA(%)": null
+    },
+    {
+        "NCM": "0102.21",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Reprodutores de ra\u00e7a pura",
+        "AL\u00cdQUOTA(%)": null
+    },
+    ...
+    {
+        "NCM": "9706.90.00",
+        "EX": null,
+        "DESCRI\u00c7\u00c3O": "Outras",
+        "AL\u00cdQUOTA(%)": 0
+    }
+]
 ```
-
-
-## 🧐 Como ela funciona
-
-### Coleta dos dados
-Os dados são coletados utilizando a técnica de Scraping, através das bibliotecas **httpx** e **selectolax**.
-
-### Tratamento dos dados
-Após sua coleta os dados são armazenados em um arquivo no próprio servidor utilizando o formato **.pickle** já que esse permite uma grande velocidade ao ser lido/escrito utilizando a biblioteca **pandas**.
-
-### Extrutura da API
-Essa API foi criada utilizando o framework python chamado **Robyn**, que foi escrito em Ruby, possibilitando uma altíssima velocidade em comparação a outros frameworks web como Flask ou até mesmo o FastAPI. 
