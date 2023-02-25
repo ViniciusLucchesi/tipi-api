@@ -40,66 +40,72 @@ Retorno de todos os NCM's encontrados
 ```
 ```json
 [
-    {
-        "NCM": "1.01",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Cavalos, asininos e muares, vivos.",
-        "AL\u00cdQUOTA(%)": null
-    },
-    {
-        "NCM": "101.2",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Cavalos",
-        "AL\u00cdQUOTA(%)": null
-    },
-    {
-        "NCM": "0101.21.00",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Reprodutores de ra\u00e7a pura",
-        "AL\u00cdQUOTA(%)": 0
-    },
-    {
-        "NCM": "0101.29.00",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Outros",
-        "AL\u00cdQUOTA(%)": 0
-    },
-    {
-        "NCM": "0101.30.00",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Asininos",
-        "AL\u00cdQUOTA(%)": 0
-    },
-    {
-        "NCM": "0101.90.00",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Outros",
-        "AL\u00cdQUOTA(%)": 0
-    },
-    {
-        "NCM": "1.02",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Animais vivos da esp\u00e9cie bovina.",
-        "AL\u00cdQUOTA(%)": null
-    },
-    {
-        "NCM": "102.2",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Bovinos dom\u00e9sticos",
-        "AL\u00cdQUOTA(%)": null
-    },
-    {
-        "NCM": "0102.21",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Reprodutores de ra\u00e7a pura",
-        "AL\u00cdQUOTA(%)": null
-    },
-    ...
-    {
-        "NCM": "9706.90.00",
-        "EX": null,
-        "DESCRI\u00c7\u00c3O": "Outras",
-        "AL\u00cdQUOTA(%)": 0
-    }
+  {
+    "NCM": "1.01",
+    "EX": null,
+    "DESCRIÇÃO": "Cavalos, asininos e muares, vivos.",
+    "ALÍQUOTA(%)": null
+  },
+  {
+    "NCM": "101.2",
+    "EX": null,
+    "DESCRIÇÃO": "Cavalos",
+    "ALÍQUOTA(%)": null
+  },
+  {
+    "NCM": "0101.21.00",
+    "EX": null,
+    "DESCRIÇÃO": "Reprodutores de raça pura",
+    "ALÍQUOTA(%)": 0
+  },
+  {
+    "NCM": "0101.29.00",
+    "EX": null,
+    "DESCRIÇÃO": "Outros",
+    "ALÍQUOTA(%)": 0
+  },
+  {
+    "NCM": "0101.30.00",
+    "EX": null,
+    "DESCRIÇÃO": "Asininos",
+    "ALÍQUOTA(%)": 0
+  },
+  {
+    "NCM": "0101.90.00",
+    "EX": null,
+    "DESCRIÇÃO": "Outros",
+    "ALÍQUOTA(%)": 0
+  },
+  {
+    "NCM": "1.02",
+    "EX": null,
+    "DESCRIÇÃO": "Animais vivos da espécie bovina.",
+    "ALÍQUOTA(%)": null
+  },
+  {
+    "NCM": "102.2",
+    "EX": null,
+    "DESCRIÇÃO": "Bovinos domésticos",
+    "ALÍQUOTA(%)": null
+  },
+  {
+    "NCM": "0102.21",
+    "EX": null,
+    "DESCRIÇÃO": "Reprodutores de raça pura",
+    "ALÍQUOTA(%)": null
+  },
+  {
+    "NCM": "0102.21.10",
+    "EX": null,
+    "DESCRIÇÃO": "Prenhes ou com cria ao pé",
+    "ALÍQUOTA(%)": 0
+  },
+  ...
+  {
+    "NCM": "9706.90.00",
+    "EX": null,
+    "DESCRIÇÃO": "Outras",
+    "ALÍQUOTA(%)": 0
+  }
 ]
 ```
