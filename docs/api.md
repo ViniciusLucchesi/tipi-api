@@ -1,6 +1,6 @@
-# ⚙️ Rotas
+# Rotas
 
-> **GET**
+> #### GET
 >
 > Retorna somente um NCM específico
 >
@@ -9,7 +9,7 @@
 > ```
 
 
-> **GET**
+> #### GET
 >
 > Retorna todos os dados dos produtos registrados na TIPI
 >
@@ -19,7 +19,7 @@
 
 # Exemplos
 
-> **GET**
+> #### GET
 >
 > ```text
 > .../api/ncm/9011.20.1
@@ -37,7 +37,7 @@
 > ]
 > ```
 
-> **GET**
+> #### GET
 >
 > ```text
 > .../api/ncm/1.03

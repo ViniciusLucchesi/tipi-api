@@ -1,0 +1,48 @@
+.anchor span {
+    color: #00bc8c;
+}
+
+.sidebar {
+    background: #343746;
+}
+
+.sidebar h1.app-name a.app-name-link {
+    color: #a7adaf;
+}
+
+.github-corner svg {
+    color: var(--background);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #42B983;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a7adaf;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a7adaf;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a7adaf;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a7adaf;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
