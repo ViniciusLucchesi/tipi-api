@@ -1,15 +1,45 @@
-# :snake: Python
+# Linguagem de programação
 
-Python é uma **linguagem de programação** de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Lançada por Guido Van Rossum em 1991. 
+<a href="https://www.python.org/downloads/release/python-3111/">
+<img src="assets/python.png" alt="Python logo" width="50">
 
-Atualmente possui um modelo de desenvolvimento comunitário, aberto gerenciado pela organização sem fins lucrativos **Python Software Foundation**.
+![versão](https://img.shields.io/badge/versão-3.11.1-informational?style=flat)
+</a>
 
-## Versão 3.11.1
+Para esse projeto decidi utilizar a linguagem Python por ser fácil, intuitiva e extremamente poderosa, nos dando uma gama muito grande de bibliotecas e frameworks que serão de suma importância para a realização do projeto.
 
-A versão 3.11 foi escolhida para esse projeto por suas grandes promeças na melhora de desempenho. Sua versão aprimorada do CPython nos entrega uma média de 25% mais desempenho em comparação com a versão 3.10 do CPython.
+# Framework
 
-No entando dependendo da carga de trabalho, é possível constatar uma velocidade de 10%-60% superior.
+<a href="https://sansyrox.github.io/robyn/#/">
+<img src="assets/robyn.png" alt="Python logo" width="50">
 
-# Robyn
+![versão](https://img.shields.io/badge/versão-0.24.1-informational?style=flat)
+[![robyn - Documentation](https://img.shields.io/badge/Robyn-Documentation-blue?style=flat)](https://sansyrox.github.io/robyn/#/)
+</a>
 
-Robyn é um framework web Python assíncrono rápido acoplado a um servidor web escrito em Rust. Você pode conferir a documentação oficial desse framework clicando [aqui](https://robyn.tech/)
+**Robyn** é um framework python escrito em Rust, o que lhe permite uma velocidade muito maior com relação a outros frameworks python voltados para a web como Django, Flask e até mesmo o FastAPI, sendo este o motivo que me levou a escolher esse framework para ser utilizado no projeto.
+
+# Web Scraping
+
+Para conseguir acessar as informações contidas na [planilha de Excel](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/documentos-e-arquivos/tipi-em-excel.xlsx) disponibilizada na aba da [Receita Federal](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/legislacao-por-assunto/tipi-tabela-de-incidencia-do-imposto-sobre-produtos-industrializados) estão sendo utilizadas duas bibliotecas:
+
+- HTTPX
+- Selectolax
+
+#### HTTPX
+
+HTTPX é um cliente HTTP completo para Python 3, que fornece APIs síncronas e assíncronas e suporte para HTTP/1.1 e HTTP/2.
+
+[![httpx - Documentation](https://img.shields.io/badge/HTTPX-Documentation-blue?style=flat)](https://www.python-httpx.org/)
+
+#### Selectolax
+
+O Selectolax é descrito como um analisador HTML rápido com seletores CSS usando os mecanismos Modest e Lexbor
+
+[![selectolax - Documentation](https://img.shields.io/badge/Selectolax-Documentation-blue?style=flat)](https://selectolax.readthedocs.io/en/latest/index.html)
+
+# Tratamento dos dados
+
+Para tratar e manipular os dados escolhi utilizar a biblioteca **Pandas**, por ser uma das bibliotecas mais utilizadas por Cientistas de dados graças as sua versatilidade e agilidade ao trabalhar com grandes volumes de dados.
+
+[![pandas - Documentation](https://img.shields.io/badge/Pandas-Documentation-blue?style=flat)](https://pandas.pydata.org/)

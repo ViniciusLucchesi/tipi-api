@@ -1,7 +1,17 @@
+/* Titles */
+.markdown-section h1 {
+    font-size: 2rem;
+    margin: 25px 0 1rem;
+}
 .anchor span {
     color: #00bc8c;
 }
 
+.markdown-section p a {
+    font-weight: normal;
+}
+
+/* Sidebar Menu */
 .sidebar {
     background: #343746;
 }
@@ -10,10 +20,41 @@
     color: #a7adaf;
 }
 
+/* Github icon */
 .github-corner svg {
     color: var(--background);
 }
 
+
+/* Messages */
+.informational-msg {
+    margin-top: 35px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background: #42B983;
+}
+
+.informational-msg h3 {
+    padding-left: 5px;
+    margin: 0px;
+    color: #fff;
+}
+
+.informational-msg p {
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Code */
+button.docsify-copy-code-button {
+    margin-top: 15px;
+    color: #fff;
+    background: none;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 20px;
     height: 20px;

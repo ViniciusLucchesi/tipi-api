@@ -1,23 +1,8 @@
-# Rotas
+# Exemplos de utilização
 
-> #### GET
->
-> Retorna somente um NCM específico
->
-> ```text
-> .../api/ncm/<numero_do_ncm>
-> ```
+### Buscando por um código NCM único
 
-
-> #### GET
->
-> Retorna todos os dados dos produtos registrados na TIPI
->
-> ```text
-> .../api/ncm/all
-> ```
-
-# Exemplos
+Mesmo a API encontrando um único valor correspondente do NCM ela irá retornar uma lista com um objeto JSON dentro.
 
 > #### GET
 >
@@ -36,6 +21,10 @@
 >   }
 > ]
 > ```
+
+### Buscando por um grupo de NCM's
+
+Utilizando a mesma rota nós podemos buscar por um código de NCM mais abrangente, de forma a retornar todos os casos que estejam "dentro" da classificação pesquisada.
 
 > #### GET
 >
