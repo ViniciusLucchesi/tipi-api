@@ -1,5 +1,4 @@
 # PyTIPI
-
 [![Documentação](https://img.shields.io/badge/Acessar-Documentação-informational?style=for-the-badge)](https://viniciuslucchesi.github.io/tipi-api/#/)
 
 É uma API desenvolvida em Python através do framework Robyn com o objetivo de buscar as alíquotas para cada um dos códigos do **NCM** _(Nomenclatura Comum do Mercosul)_ através da utilização do Web Scraping.
@@ -15,7 +14,6 @@ Ela utiliza os dados baixados de uma planilha de Excel disponibilizada no site o
 - selectolax (0.3.12)
 
 ## 💡Funcionalidades
-
 - Buscar todos os NCM's
 - Buscar por um NCM
 
