@@ -1,7 +1,8 @@
 import re
 import pytest
 from selectolax.parser import HTMLParser
-from scrapy import HTMLBase, GovernmentScraping, ManageData
+from scrapy import HTMLBase, GovernmentScraping
+from data import ManageData
 
 
 # ManageData
