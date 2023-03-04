@@ -1,9 +1,9 @@
 # Linguagem de programação
 
-<a href="https://www.python.org/downloads/release/python-3111/">
+<a href="https://www.python.org/downloads/release/python-3112/">
 <img src="assets/python.png" alt="Python logo" width="50">
 
-![versão](https://img.shields.io/badge/versão-3.11.1-informational?style=flat)
+![versão](https://img.shields.io/badge/versão-3.11.2-informational?style=flat)
 </a>
 
 Para esse projeto decidi utilizar a linguagem Python por ser fácil, intuitiva e extremamente poderosa, nos dando uma gama muito grande de bibliotecas e frameworks que serão de suma importância para a realização do projeto.
@@ -13,7 +13,7 @@ Para esse projeto decidi utilizar a linguagem Python por ser fácil, intuitiva e
 <a href="https://sansyrox.github.io/robyn/#/">
 <img src="assets/robyn.png" alt="Python logo" width="50">
 
-![versão](https://img.shields.io/badge/versão-0.24.1-informational?style=flat)
+![versão](https://img.shields.io/badge/versão-0.25.0-informational?style=flat)
 [![robyn - Documentation](https://img.shields.io/badge/Robyn-Documentation-blue?style=flat)](https://sansyrox.github.io/robyn/#/)
 </a>
 

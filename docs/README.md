@@ -12,18 +12,18 @@ Ela utiliza os dados baixados de uma planilha de Excel disponibilizada no site o
 
 ## 🚀 Tecnologias
 
-- Python (3.11.1)
-- Robyn (0.24.1)
+- Python (3.11.2)
+- Robyn (0.25.0)
 - Pandas (1.5.3)
 - Httpx (0.23.3)
 - selectolax (0.3.12)
 
-## 💡Funcionalidades
+## 💡 Funcionalidades
 
 - Buscar todos os NCM's
 - Buscar por um NCM específico
 
-## :dart: Objetivos
+## 🎯 Objetivos
 
 Tornar o acesso a informação dos NCM's de todos os produtos registrados na TIPI mais fácil, rápido e de maniera confiável. Evitando a necessidade de buscar essa informação manualmente, ou até realizar um retrabalho para garantir que a informação adiquirida anteriormente esteja correta.
 

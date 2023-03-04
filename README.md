@@ -7,8 +7,8 @@ Ela utiliza os dados baixados de uma planilha de Excel disponibilizada no site o
 
 ## 🚀Tecnologias
 
-- Python (3.11.1)
-- Robyn (0.24.1)
+- Python (3.11.2)
+- Robyn (0.25.0)
 - Pandas (1.5.3)
 - Httpx (0.23.3)
 - selectolax (0.3.12)
