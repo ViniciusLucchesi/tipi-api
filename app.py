@@ -1,12 +1,12 @@
 import json
-from scrapy import *
 from robyn import Robyn
+from data import ManageData
+
 
 app = Robyn(__file__)
 
 
-# API routes
-@app.get('/api/ncm/all')
+@app.get('/api/ncm/all', const=True)
 def sync_ncm_all():
     context = ManageData().load_data()
     resp = json.loads(context.to_json(orient='records', force_ascii=False))
@@ -24,7 +24,6 @@ def sync_ncm_search(request):
 
 
 
-
 if __name__ == "__main__":
-    app.add_request_header("server", "robyn")
+    app.add_request_header("server", "pytipi")
     app.start(port=6500)
